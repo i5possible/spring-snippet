@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <import resource="application-basic.xml"/>
+
+    <util:map id="managerList">
+        <entry key="m1" value-ref="manager"/>
+        <entry key="m2" value-ref="manager"/>
+        <entry key="m3" value-ref="manager"/>
+    </util:map>
+
+    <util:properties id="main" location="main.properties"/>
+
+    <bean id="complicateBean" class="beans.auto.ComplicateBean" scope="singleton" primary="false"
+          init-method="init" abstract="false" autowire="byType" lazy-init="false" name="complicateBean"
+          destroy-method="destroy" depends-on="basicBean">
+        <constructor-arg name="name" value="FatBean"/>
+        <property name="userList">
+            <list>
+                <ref bean="manager"/>
+                <ref bean="manager"/>
+                <ref bean="manager"/>
+            </list>
+        </property>
+        <property name="userMap" ref="managerList"/>
+        <property name="properties" ref="main"/>
+    </bean>
+</beans>
