@@ -11,6 +11,6 @@ import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @Import({BasicConfig.class})
-@ImportResource(value = {"classpath:application-other.xml"})
+@ImportResource(value = {"classpath:application-advanced.xml"})
 public class MixedConfig {
 }
