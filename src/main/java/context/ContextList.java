@@ -1,4 +1,4 @@
-package bean;
+package context;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,7 +14,7 @@ public class ContextList {
 
     public ApplicationContext getAnnotationConfigApplicationContext() {
         new AnnotationConfigApplicationContext(ContextList.class);
-        return new AnnotationConfigApplicationContext("bean");
+        return new AnnotationConfigApplicationContext("context");
     }
 
     public ApplicationContext getFileSystemXmlApplicationContext() {
