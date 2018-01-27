@@ -1,6 +1,5 @@
 package beans.always;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,6 +9,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class BasicBean {
     public BasicBean() {
-        System.out.println("BasicBean Constructor!");
+        System.out.println("BasicBean Created!");
     }
 }

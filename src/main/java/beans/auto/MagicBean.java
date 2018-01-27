@@ -8,4 +8,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class MagicBean {
+    public MagicBean() {
+        System.out.println("MagicBean Created!");
+    }
 }
