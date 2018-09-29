@@ -26,6 +26,7 @@ public class EnvironmentTest {
     private ConfigurableEnvironment configurableEnvironment;
     @Test
     public void environment_test() {
+        configurableEnvironment.notify();
         assertEquals(1, environment.getActiveProfiles().length);
         assertEquals("main", environment.getProperty("name"));
 
