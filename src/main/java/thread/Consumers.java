@@ -16,23 +16,24 @@ public class Consumers extends Thread {
 
     @Override
     public void run() {
-        while (number < tickets.size) {
-            synchronized (tickets) {
-                if (tickets.available && number <= tickets.number) {
-                    System.out.println("Consumer buy ticket" + (++number));
-                }
-                if (number == tickets.number) {
-                    try {
-                        // if not synchronized
-                        // this sleep will lead to tickets.available be false forever.
-                        // then the while loop can't be end
-                        Thread.sleep(1);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    tickets.available = false;
-                }
-            }
+        while (tickets.sellNumber < tickets.size) {
+            tickets.sell();
+//            synchronized (tickets) {
+//                if (tickets.available && number <= tickets.number) {
+//                    System.out.println("Consumer buy ticket" + (++number));
+//                }
+//                if (number == tickets.number) {
+//                    try {
+//                        // if not synchronized
+//                        // this sleep will lead to tickets.available be false forever.
+//                        // then the while loop can't be end
+//                        Thread.sleep(1);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                    tickets.available = false;
+//                }
+//            }
         }
     }
 }
