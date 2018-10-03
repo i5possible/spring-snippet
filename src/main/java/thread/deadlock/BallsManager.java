@@ -1,7 +1,5 @@
 package thread.deadlock;
 
-import org.springframework.util.ObjectUtils;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,13 +12,12 @@ public class BallsManager {
     public static final Map<Integer, Ball> ballMap = new HashMap<>();
 
     public static void init(int playNumbers) {
-        for(int ballId = 0, total = playNumbers; ballId < total; ballId++) {
+        for (int ballId = 0, total = playNumbers; ballId < total; ballId++) {
             ballMap.put(ballId, new Ball(ballId));
         }
     }
 
     public static boolean acquireBall(int id) {
-//        System.out.println("BallManager: try to get ball " + id);
         return ballMap.get(id).acquire();
     }
 

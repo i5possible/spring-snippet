@@ -8,16 +8,13 @@ package thread.deadlock;
 public class Ball {
     private int id;
     private boolean isAvaliable = true;
-    public int getId() {
-        return id;
-    }
 
     public Ball(int id) {
         this.id = id;
     }
 
     public synchronized boolean acquire() {
-        if(isAvaliable) {
+        if (isAvaliable) {
             isAvaliable = false;
             return true;
         }

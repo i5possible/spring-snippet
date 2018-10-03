@@ -17,7 +17,7 @@ public class PlayersManager {
         PlayersManager playersManager = new PlayersManager(gameScale);
         BallsManager.init(gameScale);
         for (int playId = 0, total = playersManager.getPlayerNumbers(); playId < total; playId++) {
-            new Thread(new Player(playId, playersManager)).start();
+            new Thread(new Player(playId, total)).start();
             Thread.sleep(1);
         }
     }

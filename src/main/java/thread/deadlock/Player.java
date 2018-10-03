@@ -1,6 +1,5 @@
 package thread.deadlock;
 
-import java.util.Random;
 
 /**
  * @author lianghong
@@ -10,15 +9,13 @@ import java.util.Random;
 public class Player implements Runnable {
 
     private int playerId;
-    private PlayersManager playersManager;
     private int max;
     private int leftBallId;
     private int rightBallId;
 
-    public Player(int playerId, PlayersManager playersManager) {
+    public Player(int playerId, int max) {
         this.playerId = playerId;
-        this.playersManager = playersManager;
-        max = playersManager.getPlayerNumbers();
+        this.max = max;
         leftBallId = getLeftBallId();
         rightBallId = getRightBallId();
     }
@@ -39,7 +36,7 @@ public class Player implements Runnable {
     private void rest(int factor) {
         try {
             long millis = (long) (Math.random() * 5 * factor);
-            System.out.println(String.format("Player %d rest %d millis.", playerId,millis));
+            System.out.println(String.format("Player %d rest %d millis.", playerId, millis));
             Thread.sleep(millis);
         } catch (InterruptedException e) {
             e.printStackTrace();
