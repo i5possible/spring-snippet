@@ -26,6 +26,7 @@ public class ComplicateBean {
     private Map<String, User> userMap;
 
     private Properties properties;
+    private Map<String, Properties> propertiesMap;
 
     public ComplicateBean(String name) {
         this.name = name;
@@ -72,5 +73,13 @@ public class ComplicateBean {
 
     public Properties getProperties() {
         return properties;
+    }
+
+    public void setPropertiesMap(Map propertiesMap) {
+        this.propertiesMap = propertiesMap;
+    }
+
+    public Map getPropertiesMap() {
+        return propertiesMap;
     }
 }

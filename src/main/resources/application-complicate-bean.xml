@@ -12,6 +12,7 @@
     </util:map>
 
     <util:properties id="main" location="main.properties"/>
+    <util:properties id="second" location="second.properties"/>
 
     <bean id="complicateBean" class="beans.auto.ComplicateBean" scope="singleton" primary="false"
           init-method="init" abstract="false" autowire="byType" lazy-init="false" name="complicateBean"
@@ -26,5 +27,10 @@
         </property>
         <property name="userMap" ref="managerList"/>
         <property name="properties" ref="main"/>
+        <property name="propertiesMap" ref="propertiesMap"/>
     </bean>
+    <util:map id="propertiesMap">
+        <entry key="main" value-ref="main"/>
+        <entry key="second" value-ref="second"/>
+    </util:map>
 </beans>
