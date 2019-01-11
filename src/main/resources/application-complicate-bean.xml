@@ -11,8 +11,8 @@
         <entry key="m3" value-ref="manager"/>
     </util:map>
 
-    <util:properties id="main" location="main.properties"/>
-    <util:properties id="second" location="second.properties"/>
+    <util:properties id="main" location="classpath*:main.properties"/>
+    <util:properties id="second" location="classpath*:second.properties"/>
 
     <bean id="complicateBean" class="beans.auto.ComplicateBean" scope="singleton" primary="false"
           init-method="init" abstract="false" autowire="byType" lazy-init="false" name="complicateBean"
