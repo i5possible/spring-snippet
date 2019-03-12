@@ -1,5 +1,7 @@
 package collection;
 
+import org.bouncycastle.util.Strings;
+
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -22,7 +24,8 @@ public class collection {
 //        new TreeSet<>();
 //        new LinkedHashSet<>();
 
-        arrayList();
+//        arrayList();
+        hashMap();
     }
 
     public static void arrayList() {
@@ -52,6 +55,9 @@ public class collection {
         Object clone = map.clone();
         map.put("a", "b");
         map.get("a");
+        map.containsKey("a");
+        map.compute("a", (t, c) -> Strings.toUpperCase(c));
+        System.out.println(map);
     }
 
     public static void hashTable() {
