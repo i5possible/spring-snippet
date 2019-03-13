@@ -1,6 +1,5 @@
-package concurrency;
+package concurrency.escape;
 
-import java.util.EventListener;
 import java.util.List;
 
 /**
@@ -23,7 +22,6 @@ public class ListenerRunnable implements Runnable {
         try {
             listeners = this.source.retrieveListeners();
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         for (MyEventListener listener : listeners) {

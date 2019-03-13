@@ -1,11 +1,14 @@
 package concurrency;
 
+import javax.annotation.concurrent.NotThreadSafe;
+
 /**
  * Volatile
  * @author lianghong
  * @date 2019/3/12
  */
 
+@NotThreadSafe
 public class CountSheep {
 //    private static boolean asleep = false;
 

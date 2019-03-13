@@ -1,10 +1,13 @@
 package concurrency;
 
+import javax.annotation.concurrent.NotThreadSafe;
+
 /**
  * @author lianghong
  * @date 2019/3/12
  */
 
+@NotThreadSafe
 public class NoVisibility {
     private static boolean ready;
     private static int number;
