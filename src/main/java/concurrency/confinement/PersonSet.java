@@ -1,4 +1,4 @@
-package concurrency;
+package concurrency.confinement;
 
 import javax.annotation.concurrent.GuardedBy;
 import javax.annotation.concurrent.ThreadSafe;
@@ -27,6 +27,10 @@ public class PersonSet {
     public static void main(String[] args) {
         ArrayList<Object> objects = new ArrayList<>();
         List<Object> objects1 = Collections.synchronizedList(objects);
+        objects.iterator();
+        for (Object o : objects1) {
+            o.toString();
+        }
     }
 
     private class Person {
