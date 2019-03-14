@@ -1,4 +1,4 @@
-package concurrency.escape;
+package concurrency.delegating;
 
 import javax.annotation.concurrent.Immutable;
 import javax.annotation.concurrent.ThreadSafe;
