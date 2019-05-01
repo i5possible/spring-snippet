@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @date 05/10/2018
  */
 
-public class collection {
+public class Collection {
     public static void main(String[] args) {
 //        new ArrayList<>();
 //        new LinkedList<>();
