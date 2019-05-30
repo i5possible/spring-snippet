@@ -1,11 +1,5 @@
 package concurrency.latch;
 
-import org.json.CDL;
-
-import java.util.Map;
-import java.util.Random;
-import java.util.concurrent.CountDownLatch;
-
 /**
  * @author lianghong
  * @date 2019/5/4

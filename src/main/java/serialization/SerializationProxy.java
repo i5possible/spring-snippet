@@ -1,8 +1,5 @@
 package serialization;
 
-import java.io.Serializable;
-import java.util.EnumSet;
-
 /**
  * @author lianghong
  * @date 2019/5/4

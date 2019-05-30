@@ -1,7 +1,6 @@
 package enumcollection;
 
 import java.util.EnumMap;
-import java.util.HashMap;
 import java.util.Map;
 
 /**

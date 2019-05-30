@@ -1,8 +1,5 @@
 package enumcollection.extend;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author lianghong
  * @date 2019/5/15

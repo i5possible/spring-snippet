@@ -1,8 +1,6 @@
 package thread;
 
 
-import java.util.function.Consumer;
-
 /**
  * @author lianghong
  * @date 02/10/2018

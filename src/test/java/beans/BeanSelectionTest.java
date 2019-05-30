@@ -1,7 +1,5 @@
 package beans;
 
-import beans.always.BasicBean;
-import beans.auto.MagicBean;
 import beans.auto.office.MasterOffice;
 import beans.auto.user.impl.Master;
 import beans.auto.user.impl.Member;
@@ -14,7 +12,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
 
 /**
  * @author lianghong

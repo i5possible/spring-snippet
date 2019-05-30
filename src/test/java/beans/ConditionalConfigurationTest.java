@@ -1,9 +1,6 @@
 package beans;
 
-import beans.always.BasicBean;
-import beans.auto.MagicBean;
 import beans.other.AhaBean;
-import config.BasicConfig;
 import config.ConditionConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;

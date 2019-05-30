@@ -1,7 +1,5 @@
 package concurrency.container;
 
-import com.google.common.util.concurrent.ForwardingBlockingDeque;
-
 import java.util.PriorityQueue;
 import java.util.concurrent.*;
 

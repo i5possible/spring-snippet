@@ -1,7 +1,5 @@
 package beans;
 
-import beans.always.BasicBean;
-import beans.auto.MagicBean;
 import beans.profile.DevBean;
 import config.DevConfig;
 import org.junit.Test;
@@ -12,7 +10,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 
 /**
  * @author lianghong
