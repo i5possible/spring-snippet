@@ -15,6 +15,8 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import static org.junit.Assert.assertEquals;
 import static org.powermock.api.mockito.PowerMockito.doReturn;
+import static org.powermock.api.mockito.PowerMockito.verifyPrivate;
+import static org.powermock.api.mockito.PowerMockito.verifyStatic;
 
 
 /**
@@ -23,7 +25,7 @@ import static org.powermock.api.mockito.PowerMockito.doReturn;
  */
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest(DependedClass.class)
+@PrepareForTest({DependedClass.class, NormalClass.class})
 public class NormalClassTest {
     @InjectMocks
     private NormalClass normalClass;
@@ -37,6 +39,7 @@ public class NormalClassTest {
 
     @Before
     public void setUp() throws Exception {
+        normalClass.setName("name");
     }
 
     @After
@@ -53,10 +56,22 @@ public class NormalClassTest {
 //        PowerMockito.doReturn("OK").when(DependedClass.getSomething());
         String something = normalClass.getSomething();
         assertEquals("OK", something);
+        /**
+         * verifyStatic(Class clazz)
+         * Class.staticMethod();
+         */
+        verifyStatic(DependedClass.class);
+        DependedClass.getSomething();
 
     }
 
     @Test
     public void finalMethod() throws Exception {
+    }
+
+    @Test
+    public void privateMethod() throws Exception {
+        String privateName = normalClass.getPrivateName();
+        assertEquals("name-privately", privateName);
     }
 }

@@ -57,4 +57,11 @@ public class NormalClass implements BaseInterface {
         this.dependedClass = dependedClass;
     }
 
+    private String getNamePrivately() {
+        return this.getName() + "-privately";
+    }
+
+    public String getPrivateName() {
+        return getNamePrivately();
+    }
 }
