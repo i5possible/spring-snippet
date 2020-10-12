@@ -10,7 +10,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springversion>5.1.6.RELEASE</springversion>
-        <junitversion>4.12</junitversion>
+        <junitversion>4.13.1</junitversion>
         <!--<powermock.version>2.0.2</powermock.version>-->
         <powermock.version>1.7.4</powermock.version>
     </properties>
